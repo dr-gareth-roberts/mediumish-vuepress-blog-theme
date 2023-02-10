@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Technology
 - type: directory
   path: docs/_posts
   label: Posts
@@ -11,12 +13,16 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: heading
+  label: Cognitive Neuroscience
 - type: directory
   path: docs
   label: Pages
-  create: documents
+  create: all
   match: "*.md"
+  new_doc_ext: ".md"
   templates:
+  - post
   - page
 upload_dir: docs/.vuepress/public/assets/img
 public_path: "/assets/img"
